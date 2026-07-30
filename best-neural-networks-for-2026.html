@@ -1,290 +1,562 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 
-<title>Лучшие нейросети 2026 — бесплатные AI-инструменты, советы и генераторы</title>
+<title>Лучшие нейросети 2026 — Neural Space</title>
 
-<meta name="description" content="Подборка современных нейросетей для генерации текста, изображений, программирования и обучения. Полезные советы и рекомендации.">
+<meta name="description" content="Лучшие нейросети и AI инструменты 2026 года">
 
-<meta name="keywords" content="нейросети, AI, искусственный интеллект, ChatGPT, генератор изображений, генератор текста, программирование, Telegram AI">
-
-<meta name="robots" content="index, follow">
 
 <style>
+
+
 *{
-margin:0;
-padding:0;
 box-sizing:border-box;
-font-family:Arial,sans-serif;
+font-family:
+Inter,
+Arial,
+sans-serif;
 }
+
 
 body{
-background:#eef2f8;
-color:#222;
-line-height:1.7;
+
+margin:0;
+
+background:
+linear-gradient(135deg,#020617,#1e1b4b);
+
+color:white;
+
 }
+
+
 
 .container{
+
 max-width:1000px;
 margin:auto;
-padding:40px 20px;
-}
-
-.hero{
-text-align:center;
-margin-bottom:40px;
-}
-
-.hero h1{
-font-size:42px;
-margin-bottom:20px;
-color:#1e3a8a;
-}
-
-.hero p{
-font-size:18px;
-color:#555;
-}
-
-section{
-background:white;
 padding:30px;
-margin-top:25px;
-border-radius:18px;
-box-shadow:0 10px 30px rgba(0,0,0,.08);
+
 }
 
-h2{
-margin-bottom:15px;
-color:#1d4ed8;
+
+
+
+.glass{
+
+background:
+rgba(255,255,255,.10);
+
+border:
+1px solid rgba(255,255,255,.18);
+
+backdrop-filter:
+blur(25px);
+
+border-radius:30px;
+
+box-shadow:
+0 25px 80px rgba(0,0,0,.3);
+
 }
 
-ul{
-margin-left:20px;
-}
 
-.card{
-margin:50px auto;
-width:370px;
-background:#fff;
-border-radius:24px;
-overflow:hidden;
-box-shadow:0 15px 40px rgba(0,0,0,.12);
-transition:.3s;
-}
 
-.card:hover{
-transform:translateY(-6px);
-}
 
-.header{
-height:150px;
-background:linear-gradient(135deg,#4f46e5,#2563eb,#06b6d4);
+
+header{
+
+padding:25px;
+
 display:flex;
-justify-content:center;
-align-items:center;
-position:relative;
-overflow:hidden;
+
+justify-content:space-between;
+
 }
 
-.header::before{
-content:"";
-width:180px;
-height:180px;
-border-radius:50%;
-background:rgba(255,255,255,.15);
-position:absolute;
-top:-70px;
-left:-40px;
-}
 
-.header::after{
-content:"";
-width:120px;
-height:120px;
-border-radius:50%;
-background:rgba(255,255,255,.12);
-position:absolute;
-right:-20px;
-bottom:-20px;
-}
 
 .logo{
-width:72px;
-height:72px;
-border-radius:18px;
-background:white;
-display:flex;
-justify-content:center;
-align-items:center;
-box-shadow:0 10px 30px rgba(0,0,0,.2);
+
+font-size:24px;
+
+font-weight:800;
+
 }
 
-.logo::before{
-content:"";
-width:34px;
-height:34px;
-border-radius:10px;
-background:linear-gradient(135deg,#2563eb,#06b6d4);
-transform:rotate(45deg);
+
+
+
+
+.hero{
+
+margin-top:30px;
+
+padding:60px 40px;
+
 }
 
-.content{
-padding:28px;
+
+
+.hero h1{
+
+font-size:55px;
+
+letter-spacing:-2px;
+
 }
 
-.list{
-display:flex;
-flex-direction:column;
-gap:14px;
-margin:20px 0;
+
+
+.hero p{
+
+font-size:20px;
+
+opacity:.75;
+
 }
 
-.item{
-display:flex;
-gap:12px;
-align-items:center;
+
+
+
+
+section{
+
+margin-top:30px;
+
+padding:35px;
+
 }
 
-.dot{
-width:12px;
-height:12px;
-border-radius:50%;
-background:#2563eb;
-box-shadow:0 0 10px #2563eb;
+
+
+h2{
+
+font-size:32px;
+
 }
 
-.button{
+
+
+
+
+li{
+
+margin:12px 0;
+
+}
+
+
+
+
+
+/* реклама */
+
+
+.ads{
+
+display:grid;
+
+gap:25px;
+
+}
+
+
+
+.ad{
+
+background:
+rgba(255,255,255,.12);
+
+border-radius:25px;
+
+padding:25px;
+
+border:
+1px solid rgba(255,255,255,.2);
+
+}
+
+
+
+.ad h3{
+
+font-size:28px;
+
+}
+
+
+
+.ad p{
+
+opacity:.75;
+
+}
+
+
+
+.ad ul{
+
+list-style:none;
+
+padding:0;
+
+}
+
+
+
+.ad li{
+
+margin:10px 0;
+
+}
+
+
+
+.ad li:before{
+
+content:"✓ ";
+
+color:#38bdf8;
+
+}
+
+
+
+.ad a{
+
 display:block;
+
 text-align:center;
-padding:16px;
+
+padding:15px;
+
+margin-top:20px;
+
+background:white;
+
+color:#2563eb;
+
+border-radius:20px;
+
 text-decoration:none;
-background:linear-gradient(135deg,#2563eb,#4f46e5);
-color:white;
-font-weight:bold;
-border-radius:14px;
+
+font-weight:700;
+
 }
+
+
+
 
 footer{
-margin-top:40px;
+
 text-align:center;
-color:#666;
-font-size:14px;
+
+padding:40px;
+
+opacity:.6;
+
 }
+
+
+
 </style>
+
 </head>
+
+
 <body>
+
 
 <div class="container">
 
-<div class="hero">
-<h1>Лучшие нейросети и AI-инструменты 2026</h1>
 
-<p>
-Искусственный интеллект помогает писать тексты, создавать изображения,
-генерировать код, переводить документы и экономить время каждый день.
-</p>
+
+<header class="glass">
+
+<div class="logo">
+🌌 Neural Space
 </div>
 
-<section>
+</header>
 
-<h2>Что умеют современные нейросети?</h2>
+
+
+
+<div class="glass hero">
+
+<h1>
+Лучшие нейросети на 2026 год
+</h1>
+
 
 <p>
-Сегодня AI используется практически во всех сферах. Он помогает студентам,
-программистам, дизайнерам, предпринимателям и обычным пользователям.
-Современные модели умеют анализировать информацию, создавать изображения,
-отвечать на вопросы и писать код.
+Подборка современных AI инструментов для текста,
+изображений, программирования и обучения.
 </p>
 
+
+</div>
+
+
+
+
+
+<section class="glass">
+
+
+<h2>
+Что умеют современные нейросети?
+</h2>
+
+
+<p>
+
+Современные AI модели помогают создавать тексты,
+изображения, программировать, анализировать данные
+и автоматизировать повседневные задачи.
+
+</p>
+
+
 </section>
 
-<section>
 
-<h2>Где AI наиболее полезен?</h2>
+
+
+
+<section class="glass">
+
+
+<h2>
+Где используется AI?
+</h2>
+
 
 <ul>
+
 <li>Создание текстов</li>
-<li>Программирование</li>
+
 <li>Генерация изображений</li>
-<li>Обработка документов</li>
+
+<li>Программирование</li>
+
 <li>Переводы</li>
+
 <li>Обучение</li>
-<li>Поиск идей</li>
+
+<li>Работа с документами</li>
+
 </ul>
+
 
 </section>
 
-<section>
 
-<h2>FAQ</h2>
 
-<p><b>Можно ли пользоваться AI бесплатно?</b><br>
-Да. Многие сервисы имеют бесплатные тарифы.</p>
+
+
+
+<section class="glass">
+
+
+<h2>
+FAQ
+</h2>
+
+
+<p>
+
+<b>Можно ли пользоваться AI бесплатно?</b><br>
+Да, многие сервисы имеют бесплатные версии.
+
+</p>
+
 
 <br>
 
-<p><b>Можно ли писать код с помощью AI?</b><br>
-Да. Современные модели помогают создавать программы, искать ошибки и объяснять алгоритмы.</p>
+
+<p>
+
+<b>Помогает ли AI программистам?</b><br>
+Да, нейросети могут писать код, объяснять ошибки
+и помогать создавать проекты.
+
+</p>
+
 
 </section>
 
-<!-- РЕКЛАМА -->
 
-<div class="card">
 
-<div class="header">
-<div class="logo"></div>
-</div>
 
-<div class="content">
 
-<h2>PrsmGen AI</h2>
 
-<p>
-Все популярные нейросети в одном Telegram-боте.
-Генерируйте тексты, изображения, код и получайте ответы за секунды.
-</p>
 
-<div class="list">
+<section class="glass">
 
-<div class="item">
-<div class="dot"></div>
-Доступ к нескольким AI
-</div>
 
-<div class="item">
-<div class="dot"></div>
-Высокая скорость работы
-</div>
+<h2>
+Рекомендуемые сервисы
+</h2>
 
-<div class="item">
-<div class="dot"></div>
-Удобно прямо в Telegram
-</div>
+
+
+<div id="ads" class="ads">
+
+Загрузка...
 
 </div>
 
-<a class="button"
-href="https://t.me/PrsmGenbot"
-target="_blank"
-rel="noopener">
-Открыть бота
-</a>
 
-</div>
+</section>
 
-</div>
+
+
+
+
 
 <footer>
 
-© 2026 AI Guide. Полезная информация о современных нейросетях.
+© 2026 Neural Space
 
 </footer>
 
+
+
 </div>
+
+
+
+
+
+
+
+<script>
+
+
+const ADS_URL =
+"https://gist.githubusercontent.com/Secret-XYZ/07b65105bb52923e3b67a65d5d6dd594/raw/fbe92dc05c10b5604c8f51c00aa961711b963f66/Advertising";
+
+
+
+async function loadAds(){
+
+
+let box =
+document.getElementById("ads");
+
+
+try{
+
+
+let res =
+await fetch(ADS_URL+"?"+Date.now());
+
+
+let text =
+await res.text();
+
+
+
+let blocks =
+text.split(/\n\s*\n/);
+
+
+
+let html="";
+
+
+
+blocks.forEach(block=>{
+
+
+let name =
+block.match(/Название:\s*(.*)/);
+
+let desc =
+block.match(/Описание:\s*(.*)/);
+
+let p1 =
+block.match(/Пункт1:\s*(.*)/);
+
+let p2 =
+block.match(/Пункт2:\s*(.*)/);
+
+let p3 =
+block.match(/Пункт3:\s*(.*)/);
+
+let link =
+block.match(/Ссылка:\s*(.*)/);
+
+
+
+if(name && desc && link){
+
+
+html+=`
+
+<div class="ad">
+
+<h3>${name[1]}</h3>
+
+<p>${desc[1]}</p>
+
+
+<ul>
+
+<li>${p1 ? p1[1]:""}</li>
+
+<li>${p2 ? p2[1]:""}</li>
+
+<li>${p3 ? p3[1]:""}</li>
+
+</ul>
+
+
+<a href="${link[1]}" target="_blank">
+Открыть
+</a>
+
+
+</div>
+
+`;
+
+
+}
+
+
+});
+
+
+
+box.innerHTML=html || "Рекламы нет";
+
+
+}
+
+catch(e){
+
+box.innerHTML=
+"Не удалось загрузить рекламу";
+
+}
+
+
+}
+
+
+loadAds();
+
+
+
+</script>
+
 
 </body>
 </html>
