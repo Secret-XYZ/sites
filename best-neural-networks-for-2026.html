@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
-<title>Лучшие нейросети 2026 — Neural Space</title>
+<title>Загрузка...</title>
 
-<meta name="description" content="Лучшие нейросети и AI инструменты 2026 года">
-
+<meta name="description" content="Лучшие нейросети 2026 года. Обзор AI инструментов.">
 
 <style>
-
 
 *{
 box-sizing:border-box;
 font-family:
 Inter,
-Arial,
+-apple-system,
+BlinkMacSystemFont,
+"Segoe UI",
 sans-serif;
 }
 
@@ -27,7 +28,9 @@ body{
 margin:0;
 
 background:
-linear-gradient(135deg,#020617,#1e1b4b);
+radial-gradient(circle at 20% 20%,#2563eb,transparent 35%),
+radial-gradient(circle at 80% 80%,#9333ea,transparent 35%),
+#020617;
 
 color:white;
 
@@ -38,11 +41,12 @@ color:white;
 .container{
 
 max-width:1000px;
+
 margin:auto;
-padding:30px;
+
+padding:25px;
 
 }
-
 
 
 
@@ -55,12 +59,15 @@ border:
 1px solid rgba(255,255,255,.18);
 
 backdrop-filter:
-blur(25px);
+blur(30px);
 
-border-radius:30px;
+-webkit-backdrop-filter:
+blur(30px);
+
+border-radius:32px;
 
 box-shadow:
-0 25px 80px rgba(0,0,0,.3);
+0 25px 80px rgba(0,0,0,.35);
 
 }
 
@@ -70,25 +77,39 @@ box-shadow:
 
 header{
 
-padding:25px;
+padding:25px 30px;
 
 display:flex;
 
 justify-content:space-between;
 
+align-items:center;
+
 }
 
 
 
-.logo{
+.site-name{
 
-font-size:24px;
+font-size:28px;
 
 font-weight:800;
 
 }
 
 
+
+nav a{
+
+color:white;
+
+text-decoration:none;
+
+margin-left:25px;
+
+opacity:.75;
+
+}
 
 
 
@@ -106,7 +127,9 @@ padding:60px 40px;
 
 font-size:55px;
 
-letter-spacing:-2px;
+letter-spacing:-3px;
+
+margin:0 0 20px;
 
 }
 
@@ -118,15 +141,60 @@ font-size:20px;
 
 opacity:.75;
 
+line-height:1.6;
+
+}
+
+
+
+
+.article{
+
+margin-top:35px;
+
+padding:40px;
+
+}
+
+
+
+.article h2{
+
+font-size:32px;
+
+margin-top:0;
+
+}
+
+
+
+.article p{
+
+font-size:18px;
+
+line-height:1.8;
+
+opacity:.85;
+
+}
+
+
+
+.article ul{
+
+line-height:2;
+
+font-size:18px;
+
 }
 
 
 
 
 
-section{
+.ads{
 
-margin-top:30px;
+margin-top:35px;
 
 padding:35px;
 
@@ -134,30 +202,7 @@ padding:35px;
 
 
 
-h2{
-
-font-size:32px;
-
-}
-
-
-
-
-
-li{
-
-margin:12px 0;
-
-}
-
-
-
-
-
-/* реклама */
-
-
-.ads{
+.ads-list{
 
 display:grid;
 
@@ -169,15 +214,15 @@ gap:25px;
 
 .ad{
 
-background:
-rgba(255,255,255,.12);
-
-border-radius:25px;
-
 padding:25px;
 
+background:
+rgba(255,255,255,.08);
+
 border:
-1px solid rgba(255,255,255,.2);
+1px solid rgba(255,255,255,.15);
+
+border-radius:25px;
 
 }
 
@@ -185,7 +230,9 @@ border:
 
 .ad h3{
 
-font-size:28px;
+margin-top:0;
+
+font-size:25px;
 
 }
 
@@ -199,29 +246,9 @@ opacity:.75;
 
 
 
-.ad ul{
-
-list-style:none;
-
-padding:0;
-
-}
-
-
-
 .ad li{
 
 margin:10px 0;
-
-}
-
-
-
-.ad li:before{
-
-content:"✓ ";
-
-color:#38bdf8;
 
 }
 
@@ -233,15 +260,15 @@ display:block;
 
 text-align:center;
 
-padding:15px;
+padding:14px;
 
 margin-top:20px;
+
+border-radius:30px;
 
 background:white;
 
 color:#2563eb;
-
-border-radius:20px;
 
 text-decoration:none;
 
@@ -251,17 +278,34 @@ font-weight:700;
 
 
 
-
 footer{
+
+padding:50px;
 
 text-align:center;
 
-padding:40px;
-
-opacity:.6;
+opacity:.5;
 
 }
 
+
+
+@media(max-width:700px){
+
+.hero h1{
+
+font-size:40px;
+
+}
+
+
+nav{
+
+display:none;
+
+}
+
+}
 
 
 </style>
@@ -278,16 +322,31 @@ opacity:.6;
 
 <header class="glass">
 
-<div class="logo">
-🌌 Neural Space
+
+<div class="site-name">
+
+Загрузка...
+
 </div>
+
+
+<nav>
+
+<a href="index.html">
+Главная
+</a>
+
+</nav>
+
 
 </header>
 
 
 
 
-<div class="glass hero">
+
+<section class="glass hero">
+
 
 <h1>
 Лучшие нейросети на 2026 год
@@ -295,30 +354,10 @@ opacity:.6;
 
 
 <p>
-Подборка современных AI инструментов для текста,
-изображений, программирования и обучения.
-</p>
 
-
-</div>
-
-
-
-
-
-<section class="glass">
-
-
-<h2>
-Что умеют современные нейросети?
-</h2>
-
-
-<p>
-
-Современные AI модели помогают создавать тексты,
-изображения, программировать, анализировать данные
-и автоматизировать повседневные задачи.
+Подборка современных AI инструментов
+для текста, изображений, программирования
+и обучения.
 
 </p>
 
@@ -329,27 +368,80 @@ opacity:.6;
 
 
 
-<section class="glass">
+
+<section class="glass article">
 
 
 <h2>
-Где используется AI?
+Что такое современные нейросети?
+</h2>
+
+
+<p>
+
+Нейросети — это системы искусственного интеллекта,
+которые способны анализировать информацию,
+создавать новый контент и помогать человеку
+решать различные задачи.
+
+</p>
+
+
+<p>
+
+В 2026 году AI активно используется
+в разработке программ, создании изображений,
+работе с документами и обучении.
+
+</p>
+
+
+</section>
+
+
+
+
+
+
+<section class="glass article">
+
+
+<h2>
+Для чего используют AI?
 </h2>
 
 
 <ul>
 
-<li>Создание текстов</li>
+<li>
+Создание текстов и статей
+</li>
 
-<li>Генерация изображений</li>
 
-<li>Программирование</li>
+<li>
+Генерация изображений
+</li>
 
-<li>Переводы</li>
 
-<li>Обучение</li>
+<li>
+Помощь в программировании
+</li>
 
-<li>Работа с документами</li>
+
+<li>
+Анализ данных
+</li>
+
+
+<li>
+Перевод документов
+</li>
+
+
+<li>
+Поиск идей и информации
+</li>
+
 
 </ul>
 
@@ -361,30 +453,27 @@ opacity:.6;
 
 
 
-<section class="glass">
+<section class="glass article">
 
 
 <h2>
-FAQ
+Как выбрать нейросеть?
 </h2>
 
 
 <p>
 
-<b>Можно ли пользоваться AI бесплатно?</b><br>
-Да, многие сервисы имеют бесплатные версии.
+Перед использованием стоит определить задачу.
+Одни модели лучше подходят для текста,
+другие для изображений или программирования.
 
 </p>
 
 
-<br>
-
-
 <p>
 
-<b>Помогает ли AI программистам?</b><br>
-Да, нейросети могут писать код, объяснять ошибки
-и помогать создавать проекты.
+Также важно учитывать стоимость,
+скорость работы и доступность функций.
 
 </p>
 
@@ -397,24 +486,24 @@ FAQ
 
 
 
-<section class="glass">
+<section class="glass ads">
 
 
 <h2>
-Рекомендуемые сервисы
+Полезные сервисы
 </h2>
 
 
 
-<div id="ads" class="ads">
+<div id="adsBox" class="ads-list">
 
 Загрузка...
 
 </div>
 
 
-</section>
 
+</section>
 
 
 
@@ -422,7 +511,8 @@ FAQ
 
 <footer>
 
-© 2026 Neural Space
+<span class="site-name"></span>
+ © 2026
 
 </footer>
 
@@ -435,37 +525,83 @@ FAQ
 
 
 
-
 <script>
 
 
+
+const SITENAME_URL =
+"https://gist.githubusercontent.com/Secret-XYZ/75033c4ce48c23faca9b2fb03d371900/raw/18f9ba2cdc57f03876a06d6c5db1265791d449ab/Sitename";
+
+
+
 const ADS_URL =
-"https://gist.githubusercontent.com/Secret-XYZ/07b65105bb52923e3b67a65d5d6dd594/raw";
+"https://gist.githubusercontent.com/Secret-XYZ/07b65105bb52923e3b67a65d5d6dd594/raw/fbe92dc05c10b5604c8f51c00aa961711b963f66/Advertising";
+
+
+
+
+
+
+async function loadSiteName(){
+
+
+try{
+
+
+let r=
+await fetch(SITENAME_URL+"?"+Date.now());
+
+
+let name=
+(await r.text()).trim();
+
+
+document.title =
+name+" — Лучшие нейросети 2026";
+
+
+document.querySelectorAll(".site-name")
+.forEach(e=>{
+
+e.textContent=name;
+
+});
+
+
+}
+
+catch(e){}
+
+
+}
+
+
+
+
 
 
 
 async function loadAds(){
 
 
-let box =
-document.getElementById("ads");
+let box=
+document.getElementById("adsBox");
+
 
 
 try{
 
 
-let res =
+let r=
 await fetch(ADS_URL+"?"+Date.now());
 
 
-let text =
-await res.text();
+let text=
+await r.text();
 
 
-
-let blocks =
+let blocks=
 text.split(/\n\s*\n/);
-
 
 
 let html="";
@@ -475,58 +611,72 @@ let html="";
 blocks.forEach(block=>{
 
 
-let name =
+let name=
 block.match(/Название:\s*(.*)/);
 
-let desc =
+
+let desc=
 block.match(/Описание:\s*(.*)/);
 
-let p1 =
+
+let p1=
 block.match(/Пункт1:\s*(.*)/);
 
-let p2 =
+
+let p2=
 block.match(/Пункт2:\s*(.*)/);
 
-let p3 =
+
+let p3=
 block.match(/Пункт3:\s*(.*)/);
 
-let link =
+
+let link=
 block.match(/Ссылка:\s*(.*)/);
 
 
 
-if(name && desc && link){
+
+if(name&&desc&&link){
 
 
 html+=`
 
 <div class="ad">
 
-<h3>${name[1]}</h3>
 
-<p>${desc[1]}</p>
+<h3>
+${name[1]}
+</h3>
+
+
+<p>
+${desc[1]}
+</p>
 
 
 <ul>
 
-<li>${p1 ? p1[1]:""}</li>
+<li>${p1?p1[1]:""}</li>
 
-<li>${p2 ? p2[1]:""}</li>
+<li>${p2?p2[1]:""}</li>
 
-<li>${p3 ? p3[1]:""}</li>
+<li>${p3?p3[1]:""}</li>
 
 </ul>
 
 
+
 <a href="${link[1]}" target="_blank">
+
 Открыть
+
 </a>
 
 
 </div>
 
 `;
-
 
 }
 
@@ -535,21 +685,27 @@ html+=`
 
 
 
-box.innerHTML=html || "Рекламы нет";
+box.innerHTML =
+html || "Рекламы пока нет";
 
 
 }
 
 catch(e){
 
-box.innerHTML=
-"Не удалось загрузить рекламу";
+box.innerHTML =
+"Ошибка загрузки рекламы";
 
 }
 
 
 }
 
+
+
+
+
+loadSiteName();
 
 loadAds();
 
@@ -559,4 +715,5 @@ loadAds();
 
 
 </body>
+
 </html>
