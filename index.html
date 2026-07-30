@@ -1,418 +1,46 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Neural Space — AI статьи</title>
-
-<meta name="description" content="Статьи про нейросети, искусственный интеллект и AI инструменты">
-
-
-<style>
-
-*{
-box-sizing:border-box;
-font-family:
--apple-system,
-BlinkMacSystemFont,
-"Segoe UI",
-Arial;
-}
-
-
-body{
-
-margin:0;
-min-height:100vh;
-
-background:
-linear-gradient(
-135deg,
-#020617,
-#1e3a8a,
-#312e81
-);
-
-color:white;
-
-}
-
-
-.container{
-
-max-width:1200px;
-margin:auto;
-padding:40px 20px;
-
-}
-
-
-
-/* жидкое стекло */
-
-.glass{
-
-background:
-rgba(255,255,255,0.12);
-
-border:
-1px solid rgba(255,255,255,0.2);
-
-backdrop-filter:
-blur(25px);
-
--webkit-backdrop-filter:
-blur(25px);
-
-border-radius:32px;
-
-box-shadow:
-0 25px 80px rgba(0,0,0,.35);
-
-}
-
-
-
-/* главный экран */
-
-.hero{
-
-padding:80px 30px;
-
-text-align:center;
-
-}
-
-
-
-.hero h1{
-
-font-size:70px;
-
-margin:0 0 20px;
-
-letter-spacing:-3px;
-
-
-background:
-linear-gradient(
-90deg,
-white,
-#93c5fd
-);
-
-
--webkit-background-clip:text;
-
-color:transparent;
-
-}
-
-
-
-.hero p{
-
-font-size:22px;
-
-opacity:.8;
-
-}
-
-
-
-.badge{
-
-display:inline-block;
-
-margin-top:30px;
-
-padding:12px 25px;
-
-border-radius:50px;
-
-background:
-rgba(255,255,255,.15);
-
-}
-
-
-
-/* статьи */
-
-
-.section{
-
-margin-top:40px;
-
-padding:35px;
-
-}
-
-
-
-.section h2{
-
-margin-top:0;
-
-font-size:32px;
-
-}
-
-
-
-.cards{
-
-display:grid;
-
-grid-template-columns:
-repeat(auto-fit,minmax(260px,1fr));
-
-gap:25px;
-
-}
-
-
-
-.card{
-
-
-background:
-rgba(255,255,255,.10);
-
-
-border:
-1px solid rgba(255,255,255,.15);
-
-
-border-radius:25px;
-
-
-padding:25px;
-
-
-transition:.3s;
-
-
-}
-
-
-
-.card:hover{
-
-
-transform:
-translateY(-8px);
-
-
-background:
-rgba(255,255,255,.18);
-
-
-}
-
-
-
-.card h3{
-
-margin-top:0;
-
-font-size:22px;
-
-}
-
-
-
-.card p{
-
-opacity:.75;
-
-line-height:1.5;
-
-}
-
-
-
-.card a{
-
-
-display:inline-block;
-
-
-margin-top:15px;
-
-
-padding:10px 20px;
-
-
-border-radius:50px;
-
-
-background:white;
-
-
-color:#2563eb;
-
-
-text-decoration:none;
-
-
-font-weight:700;
-
-
-}
-
-
-
-.loading{
-
-opacity:.7;
-
-text-align:center;
-
-padding:40px;
-
-}
-
-
-
-footer{
-
-text-align:center;
-
-opacity:.6;
-
-padding:50px;
-
-}
-
-
-</style>
-
-</head>
-
-
-<body>
-
-
-<div class="container">
-
-
-<div class="glass hero">
-
-
-<h1>
-Neural Space
-</h1>
-
-
-<p>
-Будущее искусственного интеллекта.
-Статьи, технологии и полезные AI инструменты.
-</p>
-
-
-<div class="badge">
-AI • 2026
-</div>
-
-
-</div>
-
-
-
-
-<div class="glass section">
-
-
-<h2>
-🔥 Последние статьи
-</h2>
-
-
-<div id="articles" class="cards">
-
-
-<div class="loading">
-Загрузка статей...
-</div>
-
-
-</div>
-
-
-</div>
-
-
-
-<footer>
-
-Neural Space © 2026
-
-</footer>
-
-
-</div>
-
-
-
-
 <script>
 
-
-const RAW = 
-"https://gist.githubusercontent.com/Secret-XYZ/c7a66b9aa989a647e516b603dd368965/raw/Information";
-
-
-
+const RAW = "https://gist.githubusercontent.com/Secret-XYZ/c7a66b9aa989a647e516b603dd368965/raw/dfce710be1949b54fd28d1eb2e2d401c221c6850/Information";
 
 
 async function getArticles(){
 
-
-const box =
-document.getElementById("articles");
-
+const box = document.getElementById("articles");
 
 
 try{
 
 
-const res =
-await fetch(RAW);
+const response = await fetch(RAW + "?v=" + Date.now());
+
+
+if(!response.ok){
+throw new Error("Raw файл недоступен");
+}
+
+
+const text = await response.text();
+
+
+console.log("RAW DATA:", text);
 
 
 
-const text =
-await res.text();
+const blocks = text.split(/\n\s*\n/);
 
 
-
-
-let blocks =
-text.split(/\n\s*\n/);
-
-
-
-
-let articles=[];
+let articles = [];
 
 
 
 blocks.forEach(block=>{
 
 
-let title =
-block.match(/Заголовок:\s*(.*)/);
+const title = block.match(/(?:\d+\-)?Заголовок:\s*(.+)/);
 
+const subtitle = block.match(/Подзаголовок:\s*(.+)/);
 
-let subtitle =
-block.match(/Подзаголовок:\s*(.*)/);
-
-
-let link =
-block.match(/Ссылка:\s*(.*)/);
+const link = block.match(/Ссылка:\s*(.+)/);
 
 
 
@@ -421,11 +49,11 @@ if(title && subtitle && link){
 
 articles.push({
 
-title:title[1],
+title:title[1].trim(),
 
-subtitle:subtitle[1],
+subtitle:subtitle[1].trim(),
 
-link:link[1]
+link:link[1].trim()
 
 });
 
@@ -437,43 +65,34 @@ link:link[1]
 
 
 
-
-
-// перемешиваем
-
 articles.sort(
 ()=>Math.random()-0.5
 );
 
 
 
-
-
-let html="";
+let html = "";
 
 
 
-articles
-.slice(0,6)
-.forEach(a=>{
+articles.slice(0,6).forEach(article=>{
 
 
-html+=`
+html += `
 
 <div class="card">
 
-
 <h3>
-${a.title}
+${article.title}
 </h3>
 
 
 <p>
-${a.subtitle}
+${article.subtitle}
 </p>
 
 
-<a href="${a.link}">
+<a href="${article.link}">
 Читать →
 </a>
 
@@ -483,20 +102,20 @@ ${a.subtitle}
 `;
 
 
+
 });
 
 
 
+if(html){
 
-if(html.length){
-
-box.innerHTML=html;
+box.innerHTML = html;
 
 }
 else{
 
-box.innerHTML=
-"Статьи не найдены";
+box.innerHTML =
+"В Raw файле пока нет статей. Проверь формат.";
 
 }
 
@@ -504,29 +123,36 @@ box.innerHTML=
 
 }
 
-catch(e){
+catch(error){
 
 
-console.log(e);
+console.error(error);
 
 
-box.innerHTML=
-"Ошибка загрузки Raw файла";
+box.innerHTML = 
+`
+<div class="card">
 
+<h3>
+Ошибка загрузки
+</h3>
+
+<p>
+Не удалось получить статьи из Raw файла.
+Проверь доступность Gist.
+</p>
+
+</div>
+`;
 
 }
 
 
-}
 
+}
 
 
 getArticles();
 
 
-
 </script>
-
-
-</body>
-</html>
