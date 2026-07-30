@@ -1,46 +1,599 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Neural Space — статьи и инструменты</title>
+
+<style>
+
+*{
+box-sizing:border-box;
+font-family:
+Inter,
+-apple-system,
+BlinkMacSystemFont,
+"Segoe UI",
+sans-serif;
+}
+
+
+body{
+
+margin:0;
+min-height:100vh;
+
+background:
+linear-gradient(135deg,#050816,#111827);
+
+color:white;
+
+}
+
+
+
+body:before{
+
+content:"";
+
+position:fixed;
+
+width:500px;
+height:500px;
+
+background:#2563eb;
+
+filter:blur(160px);
+
+opacity:.35;
+
+top:-200px;
+left:-150px;
+
+z-index:-1;
+
+}
+
+
+
+body:after{
+
+content:"";
+
+position:fixed;
+
+width:450px;
+height:450px;
+
+background:#9333ea;
+
+filter:blur(160px);
+
+opacity:.3;
+
+right:-150px;
+bottom:-150px;
+
+z-index:-1;
+
+}
+
+
+
+
+.container{
+
+max-width:1200px;
+
+margin:auto;
+
+padding:25px;
+
+}
+
+
+
+.glass{
+
+background:
+rgba(255,255,255,.09);
+
+border:
+1px solid rgba(255,255,255,.15);
+
+backdrop-filter:
+blur(30px);
+
+-webkit-backdrop-filter:
+blur(30px);
+
+border-radius:32px;
+
+box-shadow:
+0 25px 80px rgba(0,0,0,.3);
+
+}
+
+
+
+
+header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:22px 30px;
+
+}
+
+
+
+.logo{
+
+font-size:26px;
+
+font-weight:800;
+
+}
+
+
+
+nav a{
+
+color:white;
+
+text-decoration:none;
+
+margin-left:25px;
+
+opacity:.75;
+
+}
+
+
+nav a:hover{
+
+opacity:1;
+
+}
+
+
+
+
+.hero{
+
+margin-top:30px;
+
+padding:70px 40px;
+
+}
+
+
+
+.hero h1{
+
+font-size:60px;
+
+margin:0;
+
+letter-spacing:-3px;
+
+}
+
+
+
+.hero p{
+
+font-size:21px;
+
+opacity:.7;
+
+max-width:600px;
+
+line-height:1.5;
+
+margin-top:20px;
+
+}
+
+
+
+
+.action{
+
+margin-top:30px;
+
+display:flex;
+
+gap:15px;
+
+}
+
+
+
+.btn{
+
+padding:14px 28px;
+
+border-radius:50px;
+
+background:white;
+
+color:#111827;
+
+font-weight:700;
+
+text-decoration:none;
+
+cursor:pointer;
+
+border:none;
+
+}
+
+
+
+
+.section{
+
+margin-top:35px;
+
+padding:35px;
+
+}
+
+
+
+.section-title{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:25px;
+
+}
+
+
+
+.section-title h2{
+
+margin:0;
+
+font-size:32px;
+
+}
+
+
+
+
+
+.cards{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(280px,1fr));
+
+gap:25px;
+
+}
+
+
+
+
+.card{
+
+background:
+rgba(255,255,255,.08);
+
+border:
+1px solid rgba(255,255,255,.12);
+
+padding:25px;
+
+border-radius:25px;
+
+transition:.3s;
+
+}
+
+
+
+.card:hover{
+
+transform:translateY(-8px);
+
+background:
+rgba(255,255,255,.15);
+
+}
+
+
+
+.card h3{
+
+margin-top:0;
+
+font-size:22px;
+
+}
+
+
+
+.card p{
+
+opacity:.7;
+
+line-height:1.5;
+
+}
+
+
+
+.card a{
+
+display:inline-block;
+
+margin-top:20px;
+
+padding:10px 20px;
+
+background:white;
+
+color:#111827;
+
+border-radius:30px;
+
+text-decoration:none;
+
+font-weight:700;
+
+}
+
+
+
+
+.status{
+
+opacity:.7;
+
+text-align:center;
+
+padding:40px;
+
+}
+
+
+
+footer{
+
+text-align:center;
+
+opacity:.5;
+
+padding:40px;
+
+}
+
+
+
+
+@media(max-width:700px){
+
+.hero h1{
+
+font-size:40px;
+
+}
+
+nav{
+
+display:none;
+
+}
+
+}
+
+
+</style>
+
+</head>
+
+
+
+<body>
+
+
+<div class="container">
+
+
+
+<header class="glass">
+
+
+<div class="logo">
+Neural Space
+</div>
+
+
+<nav>
+
+<a href="#">
+Главная
+</a>
+
+<a href="#articles">
+Статьи
+</a>
+
+<a href="#">
+Инструменты
+</a>
+
+
+</nav>
+
+
+</header>
+
+
+
+
+
+<section class="glass hero">
+
+
+<h1>
+Статьи об искусственном интеллекте
+</h1>
+
+
+<p>
+Обзоры нейросетей, полезные инструменты
+и материалы о современных технологиях.
+</p>
+
+
+<div class="action">
+
+<a class="btn" href="#articles">
+Перейти к статьям
+</a>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<section id="articles" class="glass section">
+
+
+<div class="section-title">
+
+<h2>
+Последние материалы
+</h2>
+
+
+<button class="btn" onclick="loadArticles()">
+Обновить
+</button>
+
+
+</div>
+
+
+
+<div id="articlesBox" class="cards">
+
+<div class="status">
+Загрузка...
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+<footer>
+
+Neural Space © 2026
+
+</footer>
+
+
+
+</div>
+
+
+
+
+
 <script>
 
-const RAW = "https://gist.githubusercontent.com/Secret-XYZ/c7a66b9aa989a647e516b603dd368965/raw/dfce710be1949b54fd28d1eb2e2d401c221c6850/Information";
+
+const RAW_URL =
+"https://gist.githubusercontent.com/Secret-XYZ/c7a66b9aa989a647e516b603dd368965/raw/dfce710be1949b54fd28d1eb2e2d401c221c6850/Information";
 
 
-async function getArticles(){
 
-const box = document.getElementById("articles");
+
+
+async function loadArticles(){
+
+
+const box =
+document.getElementById("articlesBox");
+
+
+
+box.innerHTML =
+`
+<div class="status">
+Загрузка...
+</div>
+`;
+
 
 
 try{
 
 
-const response = await fetch(RAW + "?v=" + Date.now());
-
-
-if(!response.ok){
-throw new Error("Raw файл недоступен");
-}
-
-
-const text = await response.text();
-
-
-console.log("RAW DATA:", text);
+const response =
+await fetch(RAW_URL+"?"+Date.now());
 
 
 
-const blocks = text.split(/\n\s*\n/);
+const text =
+await response.text();
 
 
-let articles = [];
+
+console.log(text);
+
+
+
+let blocks =
+text.split(/\n\s*\n/);
+
+
+
+let articles=[];
 
 
 
 blocks.forEach(block=>{
 
 
-const title = block.match(/(?:\d+\-)?Заголовок:\s*(.+)/);
+let title =
+block.match(/Заголовок:\s*(.*)/);
 
-const subtitle = block.match(/Подзаголовок:\s*(.+)/);
 
-const link = block.match(/Ссылка:\s*(.+)/);
+let subtitle =
+block.match(/Подзаголовок:\s*(.*)/);
+
+
+let link =
+block.match(/Ссылка:\s*(.*)/);
 
 
 
@@ -61,7 +614,9 @@ link:link[1].trim()
 }
 
 
+
 });
+
 
 
 
@@ -71,29 +626,30 @@ articles.sort(
 
 
 
-let html = "";
+let html="";
 
 
 
-articles.slice(0,6).forEach(article=>{
+articles.slice(0,6)
+.forEach(a=>{
 
 
-html += `
+html+=`
 
 <div class="card">
 
 <h3>
-${article.title}
+${a.title}
 </h3>
 
 
 <p>
-${article.subtitle}
+${a.subtitle}
 </p>
 
 
-<a href="${article.link}">
-Читать →
+<a href="${a.link}">
+Открыть →
 </a>
 
 
@@ -107,17 +663,14 @@ ${article.subtitle}
 
 
 
-if(html){
-
-box.innerHTML = html;
-
-}
-else{
-
 box.innerHTML =
-"В Raw файле пока нет статей. Проверь формат.";
-
-}
+html ||
+`
+<div class="status">
+Статьи не найдены.
+Проверь формат Raw файла.
+</div>
+`;
 
 
 
@@ -129,30 +682,26 @@ catch(error){
 console.error(error);
 
 
-box.innerHTML = 
+box.innerHTML=
 `
-<div class="card">
-
-<h3>
-Ошибка загрузки
-</h3>
-
-<p>
-Не удалось получить статьи из Raw файла.
-Проверь доступность Gist.
-</p>
-
+<div class="status">
+Ошибка загрузки Raw файла.
 </div>
 `;
 
 }
 
 
-
 }
 
 
-getArticles();
+
+loadArticles();
 
 
 </script>
+
+
+
+</body>
+</html>
