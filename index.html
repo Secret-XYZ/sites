@@ -1,54 +1,753 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Загрузка...</title>
+
+<meta name="description" content="Статьи, инструменты и материалы">
+
+<style>
+
+*{
+box-sizing:border-box;
+font-family:
+Inter,
+-apple-system,
+BlinkMacSystemFont,
+"Segoe UI",
+sans-serif;
+}
+
+
+body{
+
+margin:0;
+min-height:100vh;
+
+background:
+radial-gradient(circle at 15% 20%,#2563eb,transparent 35%),
+radial-gradient(circle at 85% 80%,#9333ea,transparent 35%),
+#020617;
+
+color:white;
+
+}
+
+
+.container{
+
+max-width:1200px;
+margin:auto;
+padding:25px;
+
+}
+
+
+
+.glass{
+
+background:
+rgba(255,255,255,.10);
+
+border:
+1px solid rgba(255,255,255,.18);
+
+backdrop-filter:
+blur(30px);
+
+-webkit-backdrop-filter:
+blur(30px);
+
+border-radius:32px;
+
+box-shadow:
+0 25px 80px rgba(0,0,0,.35);
+
+}
+
+
+
+
+
+header{
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:25px 30px;
+
+}
+
+
+
+.site-name{
+
+font-size:28px;
+font-weight:800;
+
+}
+
+
+
+nav a{
+
+color:white;
+text-decoration:none;
+margin-left:25px;
+opacity:.75;
+
+}
+
+
+
+.hero{
+
+margin-top:30px;
+
+padding:80px 40px;
+
+}
+
+
+
+.hero h1{
+
+font-size:60px;
+
+letter-spacing:-3px;
+
+margin:0;
+
+}
+
+
+
+.hero p{
+
+font-size:21px;
+
+opacity:.75;
+
+max-width:650px;
+
+line-height:1.6;
+
+}
+
+
+
+.button{
+
+display:inline-block;
+
+margin-top:30px;
+
+padding:15px 30px;
+
+background:white;
+
+color:#2563eb;
+
+border-radius:50px;
+
+font-weight:700;
+
+text-decoration:none;
+
+}
+
+
+
+
+
+.section{
+
+margin-top:35px;
+
+padding:35px;
+
+}
+
+
+
+.section-title{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:25px;
+
+}
+
+
+
+.cards{
+
+display:grid;
+
+grid-template-columns:
+repeat(auto-fit,minmax(270px,1fr));
+
+gap:25px;
+
+}
+
+
+
+
+.card{
+
+background:
+rgba(255,255,255,.10);
+
+border:
+1px solid rgba(255,255,255,.15);
+
+border-radius:25px;
+
+padding:25px;
+
+transition:.3s;
+
+}
+
+
+
+.card:hover{
+
+transform:translateY(-8px);
+
+background:
+rgba(255,255,255,.17);
+
+}
+
+
+
+.card h3{
+
+margin-top:0;
+
+font-size:23px;
+
+}
+
+
+
+.card p{
+
+opacity:.75;
+
+line-height:1.5;
+
+}
+
+
+
+.card a{
+
+display:inline-block;
+
+margin-top:20px;
+
+padding:10px 22px;
+
+background:white;
+
+color:#2563eb;
+
+border-radius:30px;
+
+text-decoration:none;
+
+font-weight:700;
+
+}
+
+
+
+
+
+.ad{
+
+background:
+rgba(255,255,255,.08);
+
+border-radius:25px;
+
+padding:25px;
+
+border:
+1px solid rgba(255,255,255,.15);
+
+}
+
+
+
+.ad h3{
+
+margin-top:0;
+
+}
+
+
+
+.ad li{
+
+margin:10px 0;
+
+}
+
+
+
+.ad li::marker{
+
+color:#60a5fa;
+
+}
+
+
+
+footer{
+
+text-align:center;
+
+padding:50px;
+
+opacity:.5;
+
+}
+
+
+
+.loading{
+
+opacity:.6;
+
+text-align:center;
+
+padding:30px;
+
+}
+
+
+
+@media(max-width:700px){
+
+.hero h1{
+
+font-size:40px;
+
+}
+
+
+nav{
+
+display:none;
+
+}
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<header class="glass">
+
+<div class="site-name">
+Загрузка...
+</div>
+
+
+<nav>
+
+<a href="#">
+Главная
+</a>
+
+<a href="#articles">
+Статьи
+</a>
+
+<a href="#ads">
+Реклама
+</a>
+
+</nav>
+
+</header>
+
+
+
+
+
+<section class="glass hero">
+
+
+<h1>
+Полезные материалы
+</h1>
+
+
+<p>
+Статьи, обзоры и инструменты
+из мира технологий.
+</p>
+
+
+<a class="button" href="#articles">
+Смотреть статьи
+</a>
+
+
+</section>
+
+
+
+
+
+
+<section id="articles" class="glass section">
+
+
+<div class="section-title">
+
+<h2>
+Последние статьи
+</h2>
+
+
+</div>
+
+
+
+<div id="articlesBox" class="cards">
+
+<div class="loading">
+Загрузка...
+</div>
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<section id="ads" class="glass section">
+
+
+<h2>
+Рекомендуемые сервисы
+</h2>
+
+
+<div id="adsBox" class="cards">
+
+
+<div class="loading">
+Загрузка...
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<footer>
+
+<span class="site-name">
+</span>
+ © 2026
+
+</footer>
+
+
+
+</div>
+
+
+
+
+
 <script>
 
-const SITE_NAME_URL =
+
+const SITENAME_URL =
 "https://gist.githubusercontent.com/Secret-XYZ/75033c4ce48c23faca9b2fb03d371900/raw/18f9ba2cdc57f03876a06d6c5db1265791d449ab/Sitename";
+
+
+const INFORMATION_URL =
+"https://gist.githubusercontent.com/Secret-XYZ/c7a66b9aa989a647e516b603dd368965/raw/dfce710be1949b54fd28d1eb2e2d401c221c6850/Information";
+
+
+const ADS_URL =
+"https://gist.githubusercontent.com/Secret-XYZ/07b65105bb52923e3b67a65d5d6dd594/raw/fbe92dc05c10b5604c8f51c00aa961711b963f66/Advertising";
+
+
 
 
 
 async function loadSiteName(){
 
+try{
+
+let r=
+await fetch(SITENAME_URL+"?"+Date.now());
+
+let name=
+(await r.text()).trim();
+
+
+document.title=name;
+
+
+document.querySelectorAll(".site-name")
+.forEach(e=>e.textContent=name);
+
+
+}
+
+catch(e){}
+
+}
+
+
+
+
+
+
+async function loadArticles(){
+
+let box=
+document.getElementById("articlesBox");
+
 
 try{
 
 
-let response =
-await fetch(SITE_NAME_URL+"?"+Date.now());
+let r=
+await fetch(INFORMATION_URL+"?"+Date.now());
 
 
-let name =
-await response.text();
+let text=
+await r.text();
 
 
-name=name.trim();
+let blocks=
+text.split(/\n\s*\n/);
+
+
+let html="";
 
 
 
-document.title =
-name;
+blocks.forEach(block=>{
 
 
-document.querySelectorAll(".site-name")
-.forEach(el=>{
+let title=
+block.match(/Заголовок:\s*(.*)/);
 
-el.textContent=name;
+
+let subtitle=
+block.match(/Подзаголовок:\s*(.*)/);
+
+
+let link=
+block.match(/Ссылка:\s*(.*)/);
+
+
+
+if(title&&subtitle&&link){
+
+
+html+=`
+
+<div class="card">
+
+<h3>${title[1]}</h3>
+
+<p>${subtitle[1]}</p>
+
+<a href="${link[1]}">
+Открыть
+</a>
+
+</div>
+
+`;
+
+}
+
 
 });
+
+
+
+box.innerHTML=
+html||"Статей нет";
 
 
 }
 
 catch(e){
 
-console.log(
-"Ошибка загрузки названия"
-);
+box.innerHTML="Ошибка загрузки статей";
+
+}
 
 }
 
 
+
+
+
+
+async function loadAds(){
+
+
+let box=
+document.getElementById("adsBox");
+
+
+try{
+
+
+let r=
+await fetch(ADS_URL+"?"+Date.now());
+
+
+let text=
+await r.text();
+
+
+let blocks=
+text.split(/\n\s*\n/);
+
+
+
+let html="";
+
+
+
+blocks.forEach(block=>{
+
+
+let name=
+block.match(/Название:\s*(.*)/);
+
+
+let desc=
+block.match(/Описание:\s*(.*)/);
+
+
+let p1=
+block.match(/Пункт1:\s*(.*)/);
+
+
+let p2=
+block.match(/Пункт2:\s*(.*)/);
+
+
+let p3=
+block.match(/Пункт3:\s*(.*)/);
+
+
+let link=
+block.match(/Ссылка:\s*(.*)/);
+
+
+
+if(name&&desc&&link){
+
+
+html+=`
+
+<div class="ad">
+
+<h3>${name[1]}</h3>
+
+<p>${desc[1]}</p>
+
+<ul>
+
+<li>${p1?p1[1]:""}</li>
+
+<li>${p2?p2[1]:""}</li>
+
+<li>${p3?p3[1]:""}</li>
+
+</ul>
+
+
+<a class="button"
+href="${link[1]}"
+target="_blank">
+Открыть
+</a>
+
+
+</div>
+
+`;
+
 }
+
+
+});
+
+
+box.innerHTML=
+html||"Рекламы нет";
+
+
+}
+
+catch(e){
+
+box.innerHTML="Ошибка загрузки рекламы";
+
+}
+
+}
+
+
 
 
 loadSiteName();
 
+loadArticles();
+
+loadAds();
+
+
 </script>
+
+
+</body>
+</html>
